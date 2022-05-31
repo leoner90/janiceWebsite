@@ -1,0 +1,63 @@
+.Contacts {
+    min-height: 100vh;
+    padding: 5% 8% 0 8%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.ContactsDetails {
+    display: inline-block;
+    text-align: left;
+    margin: 5px 0;
+    border-bottom: 1px solid blue;
+}
+
+.Discord {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+ 
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contactsFontAwesome {
+    margin-right: 10px;
+    color: #0086a5;
+    font-size: 22px;
+   
+}
+//form
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }

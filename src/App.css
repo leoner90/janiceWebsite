@@ -1,14 +1,19 @@
 .App {
   text-align: center;
   background-color: #f4f4f4;
+  background-image: url('https://mtysolar.mx/images/bg/bg-12.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .BodyWrapper {
-  margin: 0 15%;
-  background-color: #fff;
+  
+  margin: 0 20%;
+
   min-height: 100vh;
   padding: 15px;
-  padding-top: 4%;
+  padding-top: 3%;
 }
 
 .App-logo {

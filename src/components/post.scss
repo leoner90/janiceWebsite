@@ -1,20 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 .PostWrapper {
-    background-color: #f4f4f4;
-    padding: 10px;
+    animation: 0.65s  linear 0s 1 PostAppearanceAnimation;
+    background-color: rgba(255,255,255,0.85);
+    padding: 5% 8% 0 8%;
     border-radius: 4px;
-    flex: 1 0 49%;
+    flex: 1 0 100%;
     box-sizing: border-box;
-    margin-right: 1%;
+    margin-top: 25px;
+    box-shadow: 0 0 10px #00000082;
+}
+.PostWrapper:first-of-type {
+    margin-top: 0 ;
 }
 
 .PostHeader {
-   color: #0c5390;
-   border-bottom: 1px solid #0c5390;
-   font-size: 28px;
-   font-style: italic;
-   margin-top: 5px ;
+    font-family: 'Inter', sans-serif;
+    color: #0c5390;
+    border-bottom: 1px solid #f99734;
+    font-size: 1.4vw;
+    border-radius: 99% ;
+    font-style: italic;
+    margin-top: 5px ;
+    padding: 10px;
+    box-shadow: 0 3px 2px -2px #ac5414;
 }
 
 .PostBody {
+    font-family: 'Tiro Telugu', serif;
     text-align: left;
+    font-size: 1vw;
+    padding: 50px 15px !important;
+    border-bottom: 1px solid rgb(168, 52, 52);
 }
+
+.blogTextWrapper {
+    border-radius: 5px;
+    background-color: #fff;
+    
+}
+
+.blogTextWrapper > div {
+ 
+    padding: 10px;
+}
+
+.PostImage {
+    height: 150px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.PostSignature {
+    display: flex;
+}
+.PostSignature >  div {
+    flex: 1;
+    padding: 2% 0 4% 0 ;
+    text-align: left;
+    font-style: italic;
+}
+
+ 
+
+.faThumbTack {
+    padding: 0 20px;
+    transform: rotate(30deg);
+    font-size: 1.8vw;
+    color: #42b6cf;
+}
+
+@keyframes PostAppearanceAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }

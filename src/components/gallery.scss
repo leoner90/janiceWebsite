@@ -1,0 +1,13 @@
+.GallerySection {
+    margin-right: 1%;
+    flex: 0 0 24% ;
+    min-height: 200px;
+    background-size: cover;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.GallerySection:hover {
+    border: 5px solid lightblue;
+}
