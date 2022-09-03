@@ -1,0 +1,36 @@
+.feesPageWrapper {
+  text-align: left;
+  background-color: rgba(255,255,255,0.9);
+  min-height: 100vh;
+  text-align: left;
+  padding: 5% 8% 5% 8%;
+}
+
+.FeesLinks {
+  text-decoration: underline;
+  color: #3cbbdf;
+  margin-left: 5px;
+}
+
+.feesSection , 
+.howToBookExamSection ,
+.TermsAndCondions {
+  margin-top: 5%;
+}
+
+.feesSection > p, 
+.howToBookExamSection > p,
+.TermsAndCondions > p {
+  margin-left: 35px;
+}
+
+.feesPageHeaders {
+  color: #0086a5;
+  font-size: 1.1vw;
+}
+
+.feesMainHeader {
+  text-align: center;
+  color: #0086a5;
+  font-size: 1.3vw;
+}

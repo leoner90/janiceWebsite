@@ -1,6 +1,6 @@
 .Contacts {
     min-height: 100vh;
-    padding: 5% 8% 0 8%;
+    padding: 5% 8% 8% 8%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     display: inline-block;
     text-align: left;
     margin: 5px 0;
-    border-bottom: 1px solid blue;
+ 
 }
 
 .Discord {
@@ -27,8 +27,8 @@ a {
 .contactsFontAwesome {
     margin-right: 10px;
     color: #0086a5;
-    font-size: 22px;
-   
+    font-size: 1.1vw;
+    width: 20px;
 }
 //form
 
@@ -61,3 +61,196 @@ input[type=text], select, textarea {
     background-color: #f2f2f2;
     padding: 20px;
   }
+
+  .AddressWrapper {
+    padding: 15px 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    background: aliceblue;
+  }
+  .AddressAndMapWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .ContactsWrapper {
+    margin-bottom: 20px;
+    padding: 15px 25px;
+    background: aliceblue;
+    border-radius: 3px;
+    border: 1px solid #d9e0e5;
+    font-size: 1vw;
+  }
+
+  .ContactsWrapper > p {
+    // border-bottom: 1px solid #dae2e9;
+    padding-bottom: 3px;
+    box-shadow: 0 3px 2px -2px #dae2e9;
+  }
+
+
+  // Form
+  .ContactFormHeader{
+    font-family: 'Kaushan Script', cursive;
+    color: #0086a5;
+    font-size: 1.4vw;
+    text-align: center;
+  }
+
+.FormContainer {
+  background-color: #f0f8ff;
+  padding: 0 30px 40px 30px;
+  border-radius: 3px;
+  border: 1px solid #dae2e9;
+  position: relative;
+}
+  .formFullNameWrapper {
+    display: flex;
+  }
+
+  .formFullNameWrapper > input,
+  .formFullNameWrapper > textarea {
+    flex: 1;
+    margin: 0;
+    border: none !important;
+    border-right: 1px solid #ccc !important;
+    border-radius: 0;
+  }
+
+  .formFullNameWrapper > input::placeholder,
+  .formFullNameWrapper > textarea::placeholder  {
+    color: #ccc;
+  }
+
+  .NameSectionWrapper {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+ 
+  }
+
+  .NameLabel {
+    padding: 6px 12px;
+    color: #888;
+    background-color: #fff;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .ContactFormSubmitBtn {
+    background-color: #0086a5 !important;
+    font-weight: bold;
+    width: 99%;
+    
+  }
+
+
+  @media only screen and (max-width: 800px) {
+    .Contacts > * , 
+    .ContactsWrapper > p ,
+    .ContactFormHeader,
+    .contactsFontAwesome  {
+      font-size: 3vw !important;
+    }
+  }
+
+
+  /* To center the spinner*/
+.pos-center {
+  position: fixed;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+}
+
+.loader{
+  border: 7px solid #9eddff;
+  border-top: 7px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  z-index: 999;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loaderWrapper,
+#SuccesWrapper {
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  height: 100%;
+  background-color: #f0f8ff;
+  display: none;
+  // opacity: 0;
+}
+
+.success {
+  color: green;
+  font-size: 1vw;
+ 
+}
+
+
+.errorAwesomeIcon {
+  font-size: 0.9vw;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+.errMsg {
+  padding:  2px;
+  margin: 4px 0;
+  font-size: 0.9vw;
+  color: #ce0000;
+  background-color: #ff000014;
+  border-radius: 4px;
+  width: 100%;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.showHideLoader {
+  display: flex;
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+.errMsgAligner {
+ padding: 10px 0 ;
+  text-align: left;
+  min-height: 40px;
+}
+
+.sendOnotherMsgBtn {
+  background-color: #04AA6D;
+  border: 1px solid green;
+  padding: 12px 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sendOnotherMsgAwasomeIcon {
+  padding-left: 5px;
+}
+
+.successMsgAwesomeIcon {
+  padding-right: 8px;
+  transform: rotate(15deg);
+}

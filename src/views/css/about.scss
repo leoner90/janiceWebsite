@@ -1,0 +1,105 @@
+.AboutWrapper {
+  background-color: rgba(255,255,255,0.9);
+  min-height: 100vh;
+  text-align: left;
+  padding: 0 6% 5% 6%;
+}
+
+.aboutHeaders {
+  text-align: left;
+  font-size: 1.2vw;
+  font-style: italic;
+  margin-top: 4%;
+  color: #0086a5;
+}
+
+.ProvidesList > p,
+.typesOfCourses > p,
+.welcomeMsg > p {
+  padding-left: 35px;
+  
+}
+.aboutMainText > p {
+  padding-left: 15px;
+  
+}
+
+.AboutFontAwesome {
+  margin-right: 5px;
+  color: #0086a5;
+  font-size: 0.8vw;
+  width: 12px;
+}
+
+.faHandShakeAbout{
+  color: #0086a5;
+  font-size: 1.2vw;
+}
+.bulbWrapper {
+  text-align: right;
+}
+
+.faLightbulbAbout {
+  color: #0086a5;
+  text-align: left;
+  width: 15px;
+  padding: 7px 7px 0 0;
+  font-size: 1.2vw;
+  transform: rotate(25deg);
+}
+
+.aboutHeader {
+  display: flex;
+}
+
+.aboutMainImg {
+  flex: 1;
+  transform: rotate(10deg);
+ background-size: contain;
+ background-position: top center;
+ background-repeat: no-repeat;
+ border-radius: 5px;
+ min-height: 150px;
+}
+
+.aboutMainText {
+  flex:2;
+  padding-left: 15px;
+}
+
+.aboutMainText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -moz-box-shadow: 0px 1px 8px rgb(173 216 230 / 87%);
+  -webkit-box-shadow:0px 1px 8px rgb(173 216 230 / 87%);
+  box-shadow: 0px 1px 8px rgb(173 216 230 / 87%);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.aboutMainText p {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+.aboutHeader {
+  display: block;
+}
+
+.aboutMainImg {
+  background-position: center center;
+  height: 200px;
+}
+
+.aboutHeaders,
+.AboutFontAwesome,
+.faHandShakeAbout,
+.faLightbulbAbout {
+  font-size: inherit;
+}
+.aboutMainText{
+  margin-top: 20px;
+}
+}
+

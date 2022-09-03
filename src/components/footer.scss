@@ -1,8 +1,14 @@
 .Footer {
-    background-color: rgba(0,134,165,66%);
+    background-color: rgb(0, 135, 165);
     border-radius: 5px 5px 0 0;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 999999;
+}
+
+.footerImage {
+    background-position: center;
+    background-repeat: no-repeat;
 }

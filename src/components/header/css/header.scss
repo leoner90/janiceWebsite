@@ -68,10 +68,15 @@
 }
 
 .NavBar > a {
-    font-size: 1vw;
+    font-size: 0.8vw;
     text-decoration: none;
     color: #fff;
     font-weight: 600;
+    margin-right: 5px;
+}
+
+.NavBar > a::after {
+  content: ' | ';
 }
 
 @keyframes slideInFromLeft {
@@ -92,8 +97,86 @@
     }
   }
 
-  @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+  @keyframes slideInFromTop{
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+ 
+ 
+  .MenuShowHideBtn {
+    font-weight: bold;
+    font-size: 4vw;
+    color: #dfffff;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .MainLogo {
+      height: 50px;
+      width: 50px;
+    }
+
+    .slogan {
+      font-size: 2vw !important;
+    }
+
+    .NavBar > a,
+    .MainHeaderTitle,
+    .mainSlogan  {
+        font-size: 3.5vw !important;
+    }
+
+    .NavBar {
+      animation: 0.65s ease-out 0s 1 slideInFromTop;
+      position: fixed;
+      width: 100%;
+      background-color: #0086a5f5;
+      flex-direction: column;
+      justify-content: center;
+      display: none;
+      padding: 0;
+      
+    }
+
+    .NavBar > a{
+      text-align: left;
+      background-color: #007894;
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 10px 15px;
+      &::after {
+        content: '';
+      }
+    }
+
+    .HeaderWrapper { 
+      min-height: 110px;
+    }
+
+    .MenuShowHideBtn {
+      display: block;
+    }
+  }
+
+  .active {
+    animation: 0.35s ease-out 0s 1 menuLinkTransition;
+  color: #00d2ff !important;
+  display: inline-block;
+  
+  }
+
+
+@keyframes menuLinkTransition {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
     }
   }

@@ -1,13 +1,206 @@
 .GallerySection {
     margin-right: 1%;
+    margin-top: 30px;
     flex: 0 0 24% ;
     min-height: 200px;
-    background-size: cover;
     border-radius: 5px;
     box-sizing: border-box;
     cursor: pointer;
 }
 
-.GallerySection:hover {
-    border: 5px solid lightblue;
+
+ 
+
+.galleryPinAwesome {
+  color: #00586a;
+  height: 40px;
+  position: absolute;
+  top: -22px;
+ 
+  width: 17px;
+  font-size: 1.6vw;
+  transform: rotate(45deg);
+  z-index: 999;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.polaroidImg {
+  width: 100%;
+  height: 205px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+
+  .galleryPhotoWrapper {
+    padding:  15px;
+    background-color: #fff;
+    flex: 1;
+    margin:  10px;
+    transform: rotate(2deg);
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+  }
+
+  .galleryPhotoWrapper::before {
+    content: "";
+    height: 5px;
+    width: 15px;
+    background-color: red;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poor Story', cursive;
+  }
+  
+ 
+  .polaroid {
+    // border: 8px solid grey;
+    background: #fff;
+    min-height: 205px;
+    padding: 26px;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    filter: grayscale(85%);
+  
+    
+  }
+  .polaroid > img{
+    max-width: 100%;
+    height: auto;
+  }
+  .caption {
+    font-size: 0.8vw;
+    text-align: center;
+    overflow: hidden;
+  }
+  .item {
+    width: 100%;
+     
+   
+ 
+  }
+  .item .polaroid:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.35s;
+  }
+
+  .item {
+    transform: scale(0.8, 0.8) rotate(5deg);
+    transition: all 0.35s;
+  }
+ 
+
+  
+  .item:hover,
+  .polaroid:hover {
+    filter: none;
+    transform: scale(1, 1) rotate(0deg) !important;
+    transition: all 0.35s;
+
+    .galleryPinAwesome ,
+    .fingerprintAwesome {
+      opacity: 0;
+    }
+    
+  }
+  .item:hover .polaroid:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transform: rotate(0deg);
+    height: 90%;
+    width: 90%;
+    bottom: 0%;
+    right: 5%;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.1);
+    transition: all 0.35s;
+  }
+  
+
+
+ 
+
+
+.fingerprintAwesome {
+  color: #cdcdcd80;
+  font-size: 2vw;
+  width: 25px;
+  height: 25px;
+  transform: rotate(40deg);
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+  .GallerySection {
+      flex: 0 0 32% ;
+      
+  }
+  .polaroidImg {
+    height: 150px;
+  }
+
+  .GallerySection {
+    min-height: 175px;
+  }
+  
+}
+
+@media only screen and (max-width: 1300px) {
+  .GallerySection {
+      flex: 0 0 49% ;
+      
+  }
+  .galleryPinAwesome {
+    top: -20px;
+    width: 14px;
+  }
+  
+}
+
+@media only screen and (max-width: 800px) {
+
+
+  .polaroidImg {
+    height: 70px;
+  }
+
+  .GallerySection {
+    min-height: 100px;
+    margin-top: 15px;
+  }
+
+  .galleryPinAwesome {
+    top: -18px;
+    width: 12px;
+  }
+
+  
+}
+
+.imgLazyLoader {
+  border: 7px solid #9eddff;
+  border-top: 7px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  z-index: 999;
+  margin: 0 auto;
+  
 }

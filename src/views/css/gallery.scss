@@ -1,0 +1,222 @@
+.GalleryWrapper {
+  background-color: rgba(255,255,255,0.9);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.PopUpWrapper{
+  animation: 0.65s  linear 0s 1 SlideAppearanceAnimation;
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(122, 122, 122, 0.5);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: none;
+  flex: 1;
+}
+
+.PopContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  padding-top: 35px;
+  flex-direction: column;
+  position: relative;
+}
+
+.PopUpImg {
+  height: 75%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.PopUpHeader,
+.gallerySectionHeader {
+  word-break: break-all;
+  font-size: 1.5vw;
+  padding-bottom: 5%;
+}
+
+.PopUpCancelBtn {
+  right: 30px;
+  top: 10px;
+  font-weight: bold;
+  font-size: 1.2vw;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999;
+}
+
+.SliderWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+ 
+.nextBtn, 
+.backBtn {
+  cursor: pointer;
+}
+
+@keyframes SlideAppearanceAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.GallerySection {
+  margin-bottom: 5px;
+}
+
+.faChevrons {
+  padding: 0 20px;
+  font-size: 1.8vw;
+  color: #42b6cf;
+}
+
+
+
+.customSelect {
+  
+  background-color: #f2fdff96;
+  padding: 3px 5px;
+  min-width: 26.5%;
+  border-radius: 4px 4px 2px 2px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;  
+  border: 1px solid #abd7df;
+ 
+//  font-weight: bold;
+}
+
+.selectContentWrapper {
+  display: flex;
+  text-align: center;
+
+}
+
+.selectContentWrapper > p{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+}
+ 
+ .selectArrowDown {
+  color: #0086a5;
+  text-align: right;
+  font-size: 0.8vw;
+ 
+ }
+
+ .selectHeader {
+  flex: 1;
+  color: #015265;
+  font-size: 0.9vw;
+  justify-content: center;
+  font-style: italic;
+ }
+
+ .optionsWrapper {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px 0 10px 10px;
+  z-index: 99;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  border: 2px solid #0092ae;
+  border-top: 1px solid #0092ae;
+  max-height: 350px;
+  overflow: auto;
+ }
+
+ .optionsWrapper > p {
+  border-bottom: 1px solid #0092ae;
+  padding: 4px;
+  font-style: italic;
+  margin: 0;
+  color: #00586a;
+  font-size: 0.8vw;
+  font-weight: 500;
+  &:hover {
+    background-color: #aaf1ff;
+  }
+  &:last-child {
+    border: none;
+  }
+}
+
+.optionAwesome {
+  color: #5fb8ca;
+  font-size: 0.65vw;
+  padding: 0  10px 0 5px ;
+  transform: rotate(5deg);
+}
+
+
+
+ 
+@media only screen and (max-width: 800px) {
+  .PopContentWrapper {
+    width: 90%;
+  }
+  
+.faChevrons,
+.PopUpCancelBtn {
+  font-size: 4vw;
+}
+
+.GallerySection {
+  margin-bottom: 5px;
+}
+
+.PopUpHeade,
+.gallerySectionHeader {
+  font-size: 3vw;
+}
+
+  .customSelect {
+    
+    background-color: #f2fdff96;
+    padding: 4px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.popUpCurentImgName {
+  color: #00586a;
+  font-size: 1.3vw;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  padding-top: 40px;
+}
+
+.PopUpHeaderAwesomeIcon {
+  color: #00586a;
+  font-size: 1.1vw;
+  padding: 0 5px ;
+  transform: rotate(4deg);
+}

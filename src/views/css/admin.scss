@@ -1,0 +1,78 @@
+.adminLoginPageWrapper,
+.addNewPostWrapper {
+    background-color: rgba(255,255,255,0.9);
+    width: 70%;
+    margin: 0 auto;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+ 
+    padding-top: 15%;
+}
+
+
+.addPostBtn {
+    padding: 5px 7px;
+    border-radius: 5px;
+    display: block;
+    width: 60%;
+    background-color: rgb(38, 141, 93);
+    border: 1px solid green;
+    margin: 10px auto;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ 
+.logoutBtn {
+    text-align: left !important;
+    padding: 5px 7px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: rgb(186, 221, 255);
+    border: 1px solid rgb(11, 104, 158);
+    margin: 5px auto;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newPostHeader,
+.newPostBody {
+   width: 80% !important;
+}
+
+.newPostBody {
+    min-height: 200px;
+}
+
+.loginHeader {
+    font-style: italic;
+    color: #888;
+}
+
+.login , 
+.password {
+    margin: 5px;
+    border-radius: 2px;
+    padding: 4px;
+    border: 2px solid #888;
+}
+
+.loginSubmitBtn {
+    padding: 5px 12px;
+    border-radius: 5px;
+    background-color: rgb(186, 221, 255);
+    border: 1px solid rgb(11, 104, 158);
+    margin: 5px auto;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-style: italic;
+}

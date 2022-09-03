@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 .PostWrapper {
+   position: relative;
+    flex-direction: row;
     animation: 0.65s  linear 0s 1 PostAppearanceAnimation;
     background-color: rgba(255,255,255,0.85);
-    padding: 5% 8% 0 8%;
+    padding: 6% 8% 1% 8%;
     border-radius: 4px;
     flex: 1 0 100%;
     box-sizing: border-box;
@@ -13,25 +15,40 @@
 .PostWrapper:first-of-type {
     margin-top: 0 ;
 }
-
+.readMoreBtn {
+    background-color: #5288ae;
+    border: 2px solid rgb(33, 117, 176);;
+    margin: 0;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    padding: 7px 9px;
+    border-radius: 10px;
+    font-size: 0.8vw;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+.readMoreBtn:hover {
+    background-color: rgb(33, 117, 176);;
+}
 .PostHeader {
     font-family: 'Inter', sans-serif;
     color: #0c5390;
-    border-bottom: 1px solid #f99734;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     border-radius: 99% ;
     font-style: italic;
     margin-top: 5px ;
     padding: 10px;
-    box-shadow: 0 3px 2px -2px #ac5414;
 }
 
 .PostBody {
     font-family: 'Tiro Telugu', serif;
     text-align: left;
     font-size: 1vw;
-    padding: 50px 15px !important;
-    border-bottom: 1px solid rgb(168, 52, 52);
+    padding: 10px 25px !important;
+    height: 100%;
+    margin-left: 15px; 
 }
 
 .blogTextWrapper {
@@ -46,19 +63,45 @@
 }
 
 .PostImage {
-    height: 150px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    flex: 2;
+    height: auto;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    // min-height: 150px;
+    max-height: 160px;
+    border-radius: 4px;
+}
+
+.PostContent {
+    flex: 5;
+    height: 195px;
+    overflow-y: hidden;
+    // font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    
+}
+
+.clear{
+    clear: both;
+}
+ 
+
+.contentWrapper {
+    display: flex;
+    margin-bottom: 5px;
+    // align-items: center;
 }
 
 .PostSignature {
     display: flex;
+    border-top: 1px solid rgb(168, 52, 52);
+    padding: 15px 20px;
 }
 .PostSignature >  div {
     flex: 1;
-    padding: 2% 0 4% 0 ;
-    text-align: left;
+ 
     font-style: italic;
 }
 
@@ -78,4 +121,62 @@
     100% {
         opacity: 1;
     }
+  }
+
+  
+@media only screen and (max-width: 800px) {
+    .contentWrapper {
+        flex-direction: column;
+        align-items: unset;
+    }
+    .PostImage {
+        height: 120px;
+         
+        flex: none;
+    }
+
+    .PostBody,
+    .PostHeader,
+    .faThumbTack,
+    .PostSignature {
+        font-size: 3vw;
+    }
+
+    .faThumbTack {
+        padding: 0 5px;
+    }
+  }
+
+
+.author {
+    text-align: right;
+    color: #0c5390;
+}
+
+.Postdate {
+    text-align: left;
+}
+
+  .readMoreAwesomeIcon {
+    padding-right: 5px;
+  }
+
+  .authorAwesomeIcon {
+    padding-right: 2px;
+  }
+
+  .postHeaderAwesomeIcon {
+    font-size: 1vw;
+    padding-right: 5px;
+  }
+
+  .imgLazyLoader {
+    border: 7px solid #9eddff;
+    border-top: 7px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    z-index: 999;
+    margin: 0 auto;
   }

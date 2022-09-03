@@ -1,15 +1,105 @@
 import Post from '../components/Post.jsx'
+import React, { useEffect , useState } from 'react';
+import ViewPostModal from '../components/viewPostModal.jsx';
+import {backendLink} from '../links.js'
+let url = `${backendLink}/posts.php`;
+
 function Home() {
-    return (
-        <div style={{display: 'flex', flexWrap : 'wrap'}}> 
-            <Post author={'Janice'} date={'31.05.2022'} img={'test.jpg'} header={'New school year 2021-22'} body= {'We are so pleased to be able to reopen the school and hope to see you on Enrolment Day, September 15th 2021, any time between 10 am and 12 noon at St Martin of Tours Church, Epsom.Classes are designed for adults  (18 yrs +).  You  can come and improve your language skills for business or professional purposes, or work towards passing Cambridge English exams including IELTS.  The Beginners course focuses on conversational and basic functional skills.  Classes are small, with 4-7 learners, and some may choose to study by zoom.Boost Post'}/>
-            <Post author={'Eleonora'} date={'15.02.2022'} img={'autumn.jpg'} header={'Autumn Country Walk'}
-             body= {`Autumn Country Walk, Epsom Downs, September 2015 more Photo: <a href="localhost:3000/gallery>here</a>"}`}/>
-            <Post author={'Admin'} date={'01.11.2021'} img={''}   header={'No image Post'} body= {'No img Text'}/>
-        
-            
-        </div>
+    const [allPosts, setAllPosts] = useState([]);
+    const [postData, setPostData] = useState([]);
+    // const [limit, setLimit] = useState(Math.ceil(document.documentElement.scrollHeight / 700));
+    const [limit, setLimit] = useState(100);
+    const [maxLimit, setMaxLimit] = useState(0);
+
+// function onScroll() { 
+//     if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 10 && limit < maxLimit ) {
+//         setLimit(limit + 1);
+//         window.removeEventListener('scroll', onScroll); 
+//     }
+// }
+
+useEffect(() => {
+    let formData = new FormData();
+    formData.append('limit', limit);
+    const requestOptions = {
+        method: 'POST',
+        mode: "cors",
+        enctype: 'multipart/form-data',
+        body: formData
+    }
+    fetch(url , requestOptions)
+    .then(response => response.json())
+    .then(data => 
+        { setMaxLimit(data.maxLimit); 
+        setAllPosts(data.posts);}
+    );
+    
+    // window.addEventListener('scroll',onScroll);
+    // window.addEventListener('resize', onResize);
+    
+}, []);
+
  
+    // useEffect(() => {
+    //     let formData = new FormData();
+    //     formData.append('limit', limit);
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         mode: "cors",
+    //         enctype: 'multipart/form-data',
+    //         body: formData
+    //     }
+    //     fetch(url , requestOptions)
+    //     .then(response => response.json())
+    //     .then(data => 
+    //         {
+    //             console.log(data.maxLimit)
+    //             setMaxLimit(data.maxLimit);
+    //             setAllPosts(data.posts);
+               
+    //         }
+    //     );
+        
+    //     window.addEventListener('scroll',onScroll);
+    //     window.addEventListener('resize', onResize);
+        
+    // }, [limit,maxLimit]);
+
+ 
+    
+    // function onResize() {
+    //     window.removeEventListener('resize', onResize); 
+    //     let howManyInTotalSouldBe = Math.ceil(document.documentElement.scrollHeight / 700);
+    //     console.log('maxlimit is ', maxLimit)
+    //     // maLimit Problem
+    //     if(howManyInTotalSouldBe > limit && limit < maxLimit ) {
+    //         console.log('test',howManyInTotalSouldBe , limit,maxLimit)
+    //         setLimit(howManyInTotalSouldBe);  
+    //     }
+    //     window.addEventListener('resize', onResize);
+      
+    // }
+    return (
+        <div>{
+             
+       }
+            <ViewPostModal postData = {postData} />
+            <div style={{display: 'flex', flexWrap : 'wrap'}}>
+                
+                {allPosts.map((post, index) => {
+                    return (
+                        <Post 
+                            key = {index}
+                            author= {post.user} 
+                            date={post.createdAt} 
+                            img={post.imgLink} 
+                            header={post.header} 
+                            body= {post.body}
+                            setPostData={setPostData}/>
+                    )
+                })}    
+            </div>
+        </div>
     )
 }
 
